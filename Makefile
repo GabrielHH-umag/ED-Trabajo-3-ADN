@@ -41,15 +41,15 @@ else
 endif
 
 all: folders $(BIN_DIR)/$(EXEC)
-	@echo "\033[1;32m[OK]\033[0m Proyecto compilado correctamente."
+	@echo "Proyecto compilado correctamente."
 
 $(BIN_DIR)/$(EXEC): $(OBJ_FILES)
 	$(CC) $(CFLAGS) $(OBJ_FILES) -o $@  $(INCLUDE) $(LIBS) $(LDFLAGS)
-	@echo "\033[1;34m[BUILD]\033[0m Ejecutable generado: $@"
+	@echo "Ejecutable generado: $@"
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | folders
 	$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDE)
-	@echo "\033[1;36m[CC]\033[0m Compilado: $< -> $@"
+	@echo "Compilado: $< -> $@"
 
 .PHONY: folders
 folders:
