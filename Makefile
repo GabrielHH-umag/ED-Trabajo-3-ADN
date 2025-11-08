@@ -17,27 +17,44 @@ LIBS=
 
 CFLAGS=-Wall -Wextra -Wpedantic -O3
 LDFLAGS=-Wall -lm
-
+# Extra, detectar entorno MSYS2
+IS_MSYS2 := $(findstring MSYS,$(MSYSTEM))$(findstring MINGW,$(MSYSTEM))
 # Detectar sistema operativo
-ifeq ($(OS),Windows_NT)
-	EXEC=adn.exe
-	TEST_EXEC=test.exe
-    SHELL := cmd.exe
-    RM = del /Q
-    RMDIR = rmdir /S /Q
-    MKDIR = if not exist
-    SEP = \\
-	RUN = .\\
 
+ifeq ($(OS),Windows_NT)
+    ifeq ($(IS_MSYS2),)
+        # Windows CMD
+        EXEC=adn.exe
+        TEST_EXEC=test.exe
+        SHELL := cmd.exe
+        RM = del /Q
+        RMDIR = rmdir /S /Q
+        MKDIR = if not exist
+        SEP = \\
+        RUN = .\\
+    
+    else
+        # MSYS2 o MinGW (terminal tipo Unix sobre Windows)
+        EXEC=adn.exe
+        TEST_EXEC=test.exe
+        SHELL := /usr/bin/bash
+        RM = rm -f
+        RMDIR = rm -rf
+        MKDIR = mkdir -p
+        SEP = /
+        RUN = ./
+    
+    endif
 else
-	EXEC=adn
+    # Linux o Mac
+    EXEC=adn
     TEST_EXEC=test
-	SHELL := /bin/sh
+    SHELL := /bin/sh
     RM = rm -f
     RMDIR = rm -rf
     MKDIR = mkdir -p
     SEP = /
-	RUN = ./
+    RUN = ./
 endif
 
 all: folders $(BIN_DIR)/$(EXEC)
@@ -69,16 +86,24 @@ endif
 .PHONY: clean
 clean:
 ifeq ($(OS),Windows_NT)
-	-$(RM) $(OBJ_DIR)$(SEP)*.o 2>nul || exit 0
-	-$(RM) $(BIN_DIR)$(SEP)$(EXEC) 2>nul || exit 0
-	-$(RM) $(BIN_DIR)$(SEP)$(TEST_EXEC) 2>nul || exit 0
-	@echo "Archivos compilados eliminados."
+ifeq ($(IS_MSYS2),)
+	# --- Windows CMD ---
+	-$(RM) $(OBJ_DIR)$(SEP)*.o >nul 2>&1
+	-$(RM) $(BIN_DIR)$(SEP)$(EXEC) >nul 2>&1
+	-$(RM) $(BIN_DIR)$(SEP)$(TEST_EXEC) >nul 2>&1
 else
+	# --- MSYS2 / MinGW ---
 	-$(RM) $(OBJ_FILES)
 	-$(RM) $(BIN_DIR)/$(EXEC)
 	-$(RM) $(BIN_DIR)/$(TEST_EXEC)
-	@echo "Archivos compilados eliminados."
 endif
+else
+	# --- Linux / Mac ---
+	-$(RM) $(OBJ_FILES)
+	-$(RM) $(BIN_DIR)/$(EXEC)
+	-$(RM) $(BIN_DIR)/$(TEST_EXEC)
+endif
+	@echo "Archivos compilados eliminados."
 
 .PHONY: send
 send:
@@ -99,3 +124,8 @@ docs:
 .PHONY: rebuild
 rebuild: clean all
 	@echo "Proyecto recompilado completamente."
+
+.PHONY: run
+run:
+
+	@$(RUN)$(BIN_DIR)$(SEP)$(EXEC)
