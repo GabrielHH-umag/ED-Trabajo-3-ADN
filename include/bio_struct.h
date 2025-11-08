@@ -13,7 +13,7 @@ typedef struct Trie {
     Nodo* raiz;
     int profundidad;      // Valor m especificado en bio start
 } Trie;
-
+/* sin usar por ahora
 typedef struct Resultado {
     char* gen;           // Secuencia del gen
     int frecuencia;      // Número de apariciones
@@ -25,6 +25,6 @@ typedef struct Lista {
     Resultado* primero;
     int cantidad;
 } Lista;
-
+*/
 
 #endif // BIO_STRUCT_H
