@@ -10,7 +10,7 @@
 - [Catalina Viñas](https://github.com/2wedcfvb) - correo@umag.cl
 - [Oscar Cifuentes](https://github.com/iBluZiiZ) - ocifuent@umag.cl 
 - [Gabriel Hernández](https://github.com/GabrielHH-umag) - gabrhern@umag.cl
-- [Sebastián Vera](https://github.com/SeVAguilar) - correo@umag.cl
+- [Sebastián Vera](https://github.com/SeVAguilar) - sveragui@umag.cl
 
 ## Objetivos
 - Implementar y manipular estructuras de datos abstractas como árboles y listas enlazadas para almacenar y gestionar los datos manipulados.
