@@ -1,0 +1,79 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include "bio_struct.h"
+#include "bio_func.h"
+
+Nodo* crear_nodo_recursivo(int nivel_actual, int profundidad_total) {
+    Nodo* nodo = (Nodo*)malloc(sizeof(Nodo));
+    if (!nodo) return NULL;
+    nodo->esHoja = (nivel_actual == profundidad_total);
+    nodo->posiciones = NULL;
+    nodo->numPosiciones = 0;
+
+    for (int i = 0; i < 4; i++) nodo->hijos[i] = NULL;
+
+    if (!nodo->esHoja) {
+        for (int i = 0; i < 4; i++) {
+            nodo->hijos[i] = crear_nodo_recursivo(nivel_actual + 1, profundidad_total);
+        }
+    }
+    return nodo;
+}
+
+
+void inicializar_trie(Trie* trie, int profundidad) {
+    trie->profundidad = profundidad;
+
+    // Crear arbol completo con la funcion recursiva 
+    trie->raiz = crear_nodo_recursivo(0, profundidad);
+
+    if (!trie->raiz) {
+        fprintf(stderr, "Error: no se pudo crear el arbol.\n");
+        exit(1);
+    }
+}
+
+
+void liberar_nodo(Nodo* nodo) {
+    if (!nodo) return;
+    for (int i = 0; i < 4; i++) liberar_nodo(nodo->hijos[i]);
+    free(nodo->posiciones);
+    free(nodo);
+}
+
+void liberar_trie(Trie* trie) {
+    if (!trie) return;
+    liberar_nodo(trie->raiz);
+    free(trie);
+}
+
+int char_a_indice(char c) {
+    switch (c) {
+        case 'A': return 0;
+        case 'C': return 1;
+        case 'G': return 2;
+        case 'T': return 3;
+        default:  return -1; // invalido
+    }
+}
+
+void insertar_en_trie(Trie* trie, const char* secuencia, int posicion) {
+    Nodo* actual = trie->raiz;
+    for (int i = 0; i < trie->profundidad; i++) {
+        char c = (char)toupper((unsigned char)secuencia[i]);
+        int indice = char_a_indice(c);
+        if (indice < 0) return; // caracter invalido
+        if (!actual->hijos[indice]) {
+            actual->hijos[indice] = (Nodo*)calloc(1, sizeof(Nodo));
+            if (!actual->hijos[indice]) return;
+        }
+        actual = actual->hijos[indice];
+    }
+    actual->esHoja = 1;
+    int *tmp = (int*)realloc(actual->posiciones, (size_t)(actual->numPosiciones + 1) * sizeof(int));
+    if (!tmp) return; // sin cambiar el puntero original
+    actual->posiciones = tmp;
+    actual->posiciones[actual->numPosiciones++] = posicion;
+}
