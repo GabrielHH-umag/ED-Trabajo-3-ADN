@@ -5,7 +5,9 @@
 #include "bio_struct.h"
 #include "bio_func.h"
 
-Nodo* crear_nodo_recursivo(int nivel_actual, int profundidad_total) {
+Nodo* crear_nodo_recursivo(int nivel_actual, int profundidad_total) 
+{
+    //Profundidad total representa la altura que elije el usuario
     Nodo* nodo = (Nodo*)malloc(sizeof(Nodo));
     if (!nodo) return NULL;
     nodo->esHoja = (nivel_actual == profundidad_total);
@@ -59,21 +61,26 @@ int char_a_indice(char c) {
     }
 }
 
-void insertar_en_trie(Trie* trie, const char* secuencia, int posicion) {
+void insertar_en_trie(Trie* trie, const char* secuencia, int posicion) 
+{
+    if (!trie || !trie->raiz || !secuencia) 
+        return;
+
     Nodo* actual = trie->raiz;
-    for (int i = 0; i < trie->profundidad; i++) {
-        char c = (char)toupper((unsigned char)secuencia[i]);
-        int indice = char_a_indice(c);
-        if (indice < 0) return; // caracter invalido
-        if (!actual->hijos[indice]) {
-            actual->hijos[indice] = (Nodo*)calloc(1, sizeof(Nodo));
-            if (!actual->hijos[indice]) return;
-        }
+    for (int i = 0; i < trie->profundidad; i++) 
+    {
+        int indice = char_a_indice(secuencia[i]);
+        if (indice < 0) 
+            return; //carácter inválido se detiene la inserción
+        if (!actual->hijos[indice]) 
+            return;
+
         actual = actual->hijos[indice];
     }
     actual->esHoja = 1;
     int *tmp = (int*)realloc(actual->posiciones, (size_t)(actual->numPosiciones + 1) * sizeof(int));
-    if (!tmp) return; // sin cambiar el puntero original
+    if (!tmp) 
+        return; // si falla realloc, no escribimos
     actual->posiciones = tmp;
     actual->posiciones[actual->numPosiciones++] = posicion;
 }
