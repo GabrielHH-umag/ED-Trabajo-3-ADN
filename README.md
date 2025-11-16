@@ -1,5 +1,6 @@
 > Universidad de Magallanes — Ingeniería Civil en Computación e Informática  
 > Estructura de Datos — Grupo 3 — Tarea 3: Analizador de de secuencias de ADN
+>comandos: make - make run - bio start 2 - bio read adn.txt - bio search AA - bio max/min/all - bio exit 
 
 # Analizador ADN
 
@@ -7,7 +8,7 @@
 
 ## Integrantes
 - [Diego Herrera](https://github.com/diherrerab) - correo@umag.cl
-- [Catalina Viñas](https://github.com/2wedcfvb) - correo@umag.cl
+- [Catalina Viñas](https://github.com/2wedcfvb) - caastuci@umag.cl
 - [Oscar Cifuentes](https://github.com/iBluZiiZ) - ocifuent@umag.cl 
 - [Gabriel Hernández](https://github.com/GabrielHH-umag) - gabrhern@umag.cl
 - [Sebastián Vera](https://github.com/SeVAguilar) - sveragui@umag.cl
