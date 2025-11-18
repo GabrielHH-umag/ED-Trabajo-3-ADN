@@ -1,0 +1,6 @@
+<map id="liberar_trie" name="liberar_trie">
+<area shape="rect" id="Node000001" title="Libera completamente un Trie, incluyendo su raíz y todos los nodos." alt="" coords="5,29,87,56"/>
+<area shape="rect" id="Node000002" href="$bio__func_8c.html#a462b18b472503518bb655165df5cabfe" title="Libera recursivamente un nodo y todos sus hijos." alt="" coords="135,29,226,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,40,119,40,119,45,87,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="157,30,153,21,155,11,165,5,180,3,197,5,206,12,202,16,195,10,180,8,167,10,160,14,158,20,161,28"/>
+</map>

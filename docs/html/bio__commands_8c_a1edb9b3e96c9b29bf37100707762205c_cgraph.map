@@ -1,0 +1,8 @@
+<map id="bio_start" name="bio_start">
+<area shape="rect" id="Node000001" title="Inicializa la estructura Trie con una profundidad dada." alt="" coords="5,29,77,56"/>
+<area shape="rect" id="Node000002" href="$bio__func_8c.html#a749079479680a7fbd0d740b1a74c4c4b" title="Inicializa completamente un Trie construyendo su árbol interno." alt="" coords="125,29,225,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,40,109,40,109,45,77,45"/>
+<area shape="rect" id="Node000003" href="$bio__func_8c.html#a4ec28b8e7e60c7c08dd45b5f13c446e0" title="Crea de forma recursiva los nodos del Trie 4&#45;ario hasta alcanzar la profundidad especificada." alt="" coords="273,29,418,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="225,40,257,40,257,45,225,45"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="316,30,311,21,315,11,327,5,346,3,366,5,377,12,374,16,365,10,346,8,328,10,319,15,316,20,321,28"/>
+</map>

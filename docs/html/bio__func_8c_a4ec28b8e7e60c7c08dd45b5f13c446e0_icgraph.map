@@ -1,0 +1,14 @@
+<map id="crear_nodo_recursivo" name="crear_nodo_recursivo">
+<area shape="rect" id="Node000001" title="Crea de forma recursiva los nodos del Trie 4&#45;ario hasta alcanzar la profundidad especificada." alt="" coords="681,29,826,56"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="782,16,773,10,754,8,736,10,727,15,724,20,729,28,724,30,719,21,723,11,735,5,754,3,774,5,785,12"/>
+<area shape="rect" id="Node000002" href="$bio__func_8c.html#a749079479680a7fbd0d740b1a74c4c4b" title="Inicializa completamente un Trie construyendo su árbol interno." alt="" coords="533,29,633,56"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="666,45,633,45,633,40,666,40"/>
+<area shape="rect" id="Node000003" href="$bio__commands_8c.html#a1edb9b3e96c9b29bf37100707762205c" title="Inicializa la estructura Trie con una profundidad dada." alt="" coords="413,29,485,56"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="517,45,485,45,485,40,517,40"/>
+<area shape="rect" id="Node000004" href="$bio__commands_8c.html#a47d288bac7bea02f1c7a50acf63bc91a" title="Ejecuta la acción solicitada por el usuario." alt="" coords="238,29,365,56"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="398,45,366,45,366,40,398,40"/>
+<area shape="rect" id="Node000005" href="$bio__commands_8c.html#ab69591f35db04947754428d118f18a6c" title="Inicia el bucle principal del intérprete de comandos." alt="" coords="103,29,190,56"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="222,45,190,45,190,40,222,40"/>
+<area shape="rect" id="Node000006" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Función principal del programa." alt="" coords="5,29,55,56"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+</map>

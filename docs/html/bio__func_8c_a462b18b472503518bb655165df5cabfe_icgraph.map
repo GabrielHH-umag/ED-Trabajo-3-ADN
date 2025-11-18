@@ -1,0 +1,10 @@
+<map id="liberar_nodo" name="liberar_nodo">
+<area shape="rect" id="Node000001" title="Libera recursivamente un nodo y todos sus hijos." alt="" coords="367,29,459,56"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="435,16,427,10,413,8,399,10,392,14,391,20,394,28,389,30,385,21,388,11,398,5,413,3,430,5,438,12"/>
+<area shape="rect" id="Node000002" href="$bio__func_8c.html#aafb75a89e0316eb572a3fc1e44e0f7d3" title="Libera completamente un Trie, incluyendo su raíz y todos los nodos." alt="" coords="238,29,319,56"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="352,45,320,45,320,40,352,40"/>
+<area shape="rect" id="Node000003" href="$bio__commands_8c.html#ab69591f35db04947754428d118f18a6c" title="Inicia el bucle principal del intérprete de comandos." alt="" coords="103,29,190,56"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="222,45,190,45,190,40,222,40"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Función principal del programa." alt="" coords="5,29,55,56"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+</map>

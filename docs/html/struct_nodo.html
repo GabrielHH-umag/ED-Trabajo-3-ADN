@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Analizador ADN - Tarea 3 (Estructura de Datos): Referencia de la estructura Nodo</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Analizador ADN - Tarea 3 (Estructura de Datos)<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Analizador de secuencias de ADN utilizando estructuras de datos (árboles 4-arios y listas enlazadas) implementado en C.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('struct_nodo.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la estructura Nodo</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Representa un nodo del <a class="el" href="struct_trie.html" title="Representa el árbol 4-ario completo para la indexación de genes.">Trie</a> utilizado para almacenar genes.  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="bio__struct_8h_source.html">bio_struct.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de colaboración de Nodo:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_nodo__coll__graph.png" border="0" usemap="#a_nodo_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_nodo_coll__map" id="a_nodo_coll__map">
+<area shape="rect" title="Representa un nodo del Trie utilizado para almacenar genes." alt="" coords="5,5,58,32"/>
+<area shape="poly" title=" " alt="" coords="74,12,84,19,75,25,58,26,58,21,74,20,79,19,72,17"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">leyenda</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Campos de datos</h2></td></tr>
+<tr class="memitem:a3cbaf110ac109893592ab87ea4750c42" id="r_a3cbaf110ac109893592ab87ea4750c42"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3cbaf110ac109893592ab87ea4750c42">esHoja</a></td></tr>
+<tr class="memitem:a0a594bf30461ba04478fece17351ee2f" id="r_a0a594bf30461ba04478fece17351ee2f"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_nodo.html">Nodo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a594bf30461ba04478fece17351ee2f">hijos</a> [4]</td></tr>
+<tr class="memitem:a6c0b3b313eaaeae4572b8025130a59dd" id="r_a6c0b3b313eaaeae4572b8025130a59dd"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c0b3b313eaaeae4572b8025130a59dd">posiciones</a></td></tr>
+<tr class="memitem:adba17e92421cfb6543da95816bb70337" id="r_adba17e92421cfb6543da95816bb70337"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adba17e92421cfb6543da95816bb70337">numPosiciones</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Representa un nodo del <a class="el" href="struct_trie.html" title="Representa el árbol 4-ario completo para la indexación de genes.">Trie</a> utilizado para almacenar genes. </p>
+<p>Cada nodo posee exactamente 4 hijos, uno por cada base nitrogenada:</p><ul>
+<li>〈0〉 → A <br  />
+</li>
+<li>〈1〉 → C <br  />
+</li>
+<li>〈2〉 → G <br  />
+</li>
+<li>〈3〉 → T <br  />
+</li>
+</ul>
+<p>Los nodos hoja (nivel == profundidad m) almacenan dinámicamente las posiciones dentro de la secuencia S donde aparece el gen correspondiente. </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de campos</h2>
+<a id="a3cbaf110ac109893592ab87ea4750c42" name="a3cbaf110ac109893592ab87ea4750c42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cbaf110ac109893592ab87ea4750c42">&#9670;&#160;</a></span>esHoja</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Nodo::esHoja</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Indica si el nodo es una hoja (nivel m). </p>
+
+</div>
+</div>
+<a id="a0a594bf30461ba04478fece17351ee2f" name="a0a594bf30461ba04478fece17351ee2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a594bf30461ba04478fece17351ee2f">&#9670;&#160;</a></span>hijos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_nodo.html">Nodo</a>* Nodo::hijos[4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Punteros a los hijos correspondientes a A, C, G y T. </p>
+
+</div>
+</div>
+<a id="adba17e92421cfb6543da95816bb70337" name="adba17e92421cfb6543da95816bb70337"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adba17e92421cfb6543da95816bb70337">&#9670;&#160;</a></span>numPosiciones</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Nodo::numPosiciones</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Cantidad de posiciones almacenadas en el arreglo. </p>
+
+</div>
+</div>
+<a id="a6c0b3b313eaaeae4572b8025130a59dd" name="a6c0b3b313eaaeae4572b8025130a59dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c0b3b313eaaeae4572b8025130a59dd">&#9670;&#160;</a></span>posiciones</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* Nodo::posiciones</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Arreglo dinámico de posiciones donde aparece el gen. </p>
+
+</div>
+</div>
+<hr/>La documentación de esta estructura está generada del siguiente archivo:<ul>
+<li><a class="el" href="bio__struct_8h_source.html">bio_struct.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="struct_nodo.html">Nodo</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

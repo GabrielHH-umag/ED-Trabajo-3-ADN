@@ -1,0 +1,35 @@
+<map id="ejecutar_cli" name="ejecutar_cli">
+<area shape="rect" id="Node000001" title="Inicia el bucle principal del intérprete de comandos." alt="" coords="5,271,93,297"/>
+<area shape="rect" id="Node000002" href="$bio__commands_8c.html#a47d288bac7bea02f1c7a50acf63bc91a" title="Ejecuta la acción solicitada por el usuario." alt="" coords="144,157,272,184"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,268,174,191,177,195,71,272"/>
+<area shape="rect" id="Node000013" href="$bio__commands_8c.html#a29ae3dda30ae87bfc26262d3410eb454" title="Lee una línea ingresada por el usuario y separa los argumentos." alt="" coords="157,245,259,272"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="93,274,141,267,142,272,93,280"/>
+<area shape="rect" id="Node000014" href="$bio__func_8c.html#aafb75a89e0316eb572a3fc1e44e0f7d3" title="Libera completamente un Trie, incluyendo su raíz y todos los nodos." alt="" coords="167,296,248,323"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="93,288,152,298,151,303,93,294"/>
+<area shape="rect" id="Node000016" href="$bio__commands_8c.html#a2daf48e4dea4034901e604d19011c196" title="Muestra un mensaje inicial con información del programa." alt="" coords="141,347,275,373"/>
+<area shape="poly" id="edge17_Node000001_Node000016" title=" " alt="" coords="74,295,142,332,155,338,152,343,139,337,72,300"/>
+<area shape="rect" id="Node000003" href="$bio__commands_8c.html#a975f4559470086f99cf2a086c5aacc83" title="Recorre el Trie e imprime todos los genes presentes." alt="" coords="340,5,398,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="217,155,260,103,289,71,321,42,325,39,329,43,325,46,293,75,264,106,221,158"/>
+<area shape="rect" id="Node000004" href="$bio__commands_8c.html#a8a37410d195c51eae980c23b6156708e" title="Imprime los genes con mayor frecuencia de aparición." alt="" coords="334,56,404,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="228,155,322,92,328,88,331,93,324,97,231,159"/>
+<area shape="rect" id="Node000005" href="$bio__commands_8c.html#adc0afe5532ea0ef134665751a149294b" title="Imprime los genes con menor frecuencia (&gt;0) de aparición." alt="" coords="336,107,402,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="252,154,320,132,322,137,254,159"/>
+<area shape="rect" id="Node000006" href="$bio__commands_8c.html#a95b7f64cce4515063cf85b692961ba0b" title="Lee un archivo de texto con la secuencia genética S e inserta todos los genes posibles." alt="" coords="334,157,404,184"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="272,168,318,168,318,173,272,173"/>
+<area shape="rect" id="Node000009" href="$bio__commands_8c.html#a587ede2e6f6e1256a0f59dc93cb6dc0e" title="Busca un gen específico dentro del Trie y muestra todas sus posiciones." alt="" coords="326,208,411,235"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="254,182,313,201,311,206,252,187"/>
+<area shape="rect" id="Node000010" href="$bio__commands_8c.html#a1edb9b3e96c9b29bf37100707762205c" title="Inicializa la estructura Trie con una profundidad dada." alt="" coords="333,259,404,285"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="231,182,324,244,331,248,328,253,322,249,228,187"/>
+<area shape="rect" id="Node000007" href="$bio__func_8c.html#ae14757ffd593dcc43da912427ceab7f3" title="Inserta una aparición del gen dentro de la hoja correspondiente del Trie." alt="" coords="462,157,573,184"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="404,168,447,168,447,173,404,173"/>
+<area shape="rect" id="Node000008" href="$bio__func_8c.html#a1052c321979b6267fc0d5d0c252c5b6d" title="Convierte un carácter representando una base nitrogenada en su índice correspondiente dentro de los h..." alt="" coords="643,157,744,184"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="573,168,627,168,627,173,573,173"/>
+<area shape="rect" id="Node000011" href="$bio__func_8c.html#a749079479680a7fbd0d740b1a74c4c4b" title="Inicializa completamente un Trie construyendo su árbol interno." alt="" coords="467,259,568,285"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="405,269,452,269,452,275,405,275"/>
+<area shape="rect" id="Node000012" href="$bio__func_8c.html#a4ec28b8e7e60c7c08dd45b5f13c446e0" title="Crea de forma recursiva los nodos del Trie 4&#45;ario hasta alcanzar la profundidad especificada." alt="" coords="621,259,766,285"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="568,269,605,269,605,275,568,275"/>
+<area shape="poly" id="edge12_Node000012_Node000012" title=" " alt="" coords="663,260,658,250,661,240,674,234,693,232,714,235,726,241,723,246,713,240,693,237,675,239,665,244,663,249,668,257"/>
+<area shape="rect" id="Node000015" href="$bio__func_8c.html#a462b18b472503518bb655165df5cabfe" title="Libera recursivamente un nodo y todos sus hijos." alt="" coords="323,333,414,360"/>
+<area shape="poly" id="edge15_Node000014_Node000015" title=" " alt="" coords="250,316,308,330,307,335,248,321"/>
+<area shape="poly" id="edge16_Node000015_Node000015" title=" " alt="" coords="343,334,338,325,341,315,352,309,369,307,387,309,396,316,393,320,385,314,369,312,353,314,345,318,343,324,347,332"/>
+</map>

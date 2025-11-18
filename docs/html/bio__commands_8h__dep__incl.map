@@ -1,0 +1,7 @@
+<map id="bio_commands.h" name="bio_commands.h">
+<area shape="rect" id="Node000001" title="Declaraciones del módulo encargado de la interfaz de comandos (CLI) para el Analizador de ADN basado ..." alt="" coords="63,5,183,32"/>
+<area shape="rect" id="Node000002" href="$bio__commands_8c.html" title="Implementación del módulo encargado de la interfaz de comandos (CLI) para el analizador de ADN basado..." alt="" coords="5,80,126,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,46,77,81,73,78,101,43"/>
+<area shape="rect" id="Node000003" href="$main_8c.html" title="Punto de entrada del Analizador de ADN basado en estructuras Trie." alt="" coords="150,80,210,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="144,43,172,78,168,81,140,46"/>
+</map>

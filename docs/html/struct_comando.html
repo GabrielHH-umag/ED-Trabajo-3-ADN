@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Analizador ADN - Tarea 3 (Estructura de Datos): Referencia de la estructura Comando</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Analizador ADN - Tarea 3 (Estructura de Datos)<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Analizador de secuencias de ADN utilizando estructuras de datos (árboles 4-arios y listas enlazadas) implementado en C.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('struct_comando.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la estructura Comando</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Estructura que representa un comando ingresado por el usuario.  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="bio__commands_8h_source.html">bio_commands.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Campos de datos</h2></td></tr>
+<tr class="memitem:a878bd4224f7c30c29c00a0338d14d4a9" id="r_a878bd4224f7c30c29c00a0338d14d4a9"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a878bd4224f7c30c29c00a0338d14d4a9">cmd</a> [16]</td></tr>
+<tr class="memitem:a49b49d8698e0bd86894f7fa884d18dc7" id="r_a49b49d8698e0bd86894f7fa884d18dc7"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49b49d8698e0bd86894f7fa884d18dc7">arg1</a> [<a class="el" href="bio__commands_8h.html#a2e7620041ccf5bc13755c9f28524d22e">MAX_ARG</a>]</td></tr>
+<tr class="memitem:a3de584970fa4202ab9dfbc7ae98c5ec5" id="r_a3de584970fa4202ab9dfbc7ae98c5ec5"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3de584970fa4202ab9dfbc7ae98c5ec5">arg2</a> [<a class="el" href="bio__commands_8h.html#a2e7620041ccf5bc13755c9f28524d22e">MAX_ARG</a>]</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Estructura que representa un comando ingresado por el usuario. </p>
+<p>Un comando válido tiene la forma: </p><div class="fragment"><div class="line">bio &lt;accion&gt; &lt;argumento&gt;</div>
+</div><!-- fragment --><p>Ejemplos:</p><ul>
+<li>bio start 4 <br  />
+</li>
+<li>bio read adn.txt <br  />
+</li>
+<li>bio search ACTG </li>
+</ul>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de campos</h2>
+<a id="a49b49d8698e0bd86894f7fa884d18dc7" name="a49b49d8698e0bd86894f7fa884d18dc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49b49d8698e0bd86894f7fa884d18dc7">&#9670;&#160;</a></span>arg1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char Comando::arg1[<a class="el" href="bio__commands_8h.html#a2e7620041ccf5bc13755c9f28524d22e">MAX_ARG</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Subcomando (start, read, search, all, max, min, exit). </p>
+
+</div>
+</div>
+<a id="a3de584970fa4202ab9dfbc7ae98c5ec5" name="a3de584970fa4202ab9dfbc7ae98c5ec5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3de584970fa4202ab9dfbc7ae98c5ec5">&#9670;&#160;</a></span>arg2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char Comando::arg2[<a class="el" href="bio__commands_8h.html#a2e7620041ccf5bc13755c9f28524d22e">MAX_ARG</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Argumento adicional. </p>
+
+</div>
+</div>
+<a id="a878bd4224f7c30c29c00a0338d14d4a9" name="a878bd4224f7c30c29c00a0338d14d4a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a878bd4224f7c30c29c00a0338d14d4a9">&#9670;&#160;</a></span>cmd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char Comando::cmd[16]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="struct_comando.html" title="Estructura que representa un comando ingresado por el usuario.">Comando</a> principal. Siempre debe ser "bio". </p>
+
+</div>
+</div>
+<hr/>La documentación de esta estructura está generada del siguiente archivo:<ul>
+<li><a class="el" href="bio__commands_8h_source.html">bio_commands.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="struct_comando.html">Comando</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

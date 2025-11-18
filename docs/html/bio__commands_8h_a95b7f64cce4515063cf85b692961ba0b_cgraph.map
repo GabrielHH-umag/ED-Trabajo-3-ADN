@@ -1,0 +1,7 @@
+<map id="bio_read" name="bio_read">
+<area shape="rect" id="Node000001" title="Lee un archivo de texto con la secuencia genética S e inserta todos los genes posibles." alt="" coords="5,5,76,32"/>
+<area shape="rect" id="Node000002" href="$bio__func_8c.html#ae14757ffd593dcc43da912427ceab7f3" title="Inserta una aparición del gen dentro de la hoja correspondiente del Trie." alt="" coords="124,5,234,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,16,108,16,108,21,76,21"/>
+<area shape="rect" id="Node000003" href="$bio__func_8c.html#a1052c321979b6267fc0d5d0c252c5b6d" title="Convierte un carácter representando una base nitrogenada en su índice correspondiente dentro de los h..." alt="" coords="282,5,383,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="234,16,266,16,266,21,234,21"/>
+</map>

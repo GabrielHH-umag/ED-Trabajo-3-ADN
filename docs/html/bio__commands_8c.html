@@ -1,0 +1,627 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Analizador ADN - Tarea 3 (Estructura de Datos): Referencia del archivo bio_commands.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Analizador ADN - Tarea 3 (Estructura de Datos)<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Analizador de secuencias de ADN utilizando estructuras de datos (árboles 4-arios y listas enlazadas) implementado en C.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('bio__commands_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo bio_commands.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implementación del módulo encargado de la interfaz de comandos (CLI) para el analizador de ADN basado en <a class="el" href="struct_trie.html" title="Representa el árbol 4-ario completo para la indexación de genes.">Trie</a>.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;ctype.h&gt;</code><br />
+<code>#include &lt;limits.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="bio__commands_8h_source.html">bio_commands.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bio__func_8h_source.html">bio_func.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependencias incluidas en bio_commands.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="bio__commands_8c__incl.png" border="0" usemap="#abio__commands_8c" loading="lazy" alt=""/></div>
+<map name="abio__commands_8c" id="abio__commands_8c">
+<area shape="rect" title="Implementación del módulo encargado de la interfaz de comandos (CLI) para el analizador de ADN basado..." alt="" coords="238,5,358,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,66,107"/>
+<area shape="poly" title=" " alt="" coords="252,35,82,82,80,77,251,30"/>
+<area shape="rect" title=" " alt="" coords="90,80,154,107"/>
+<area shape="poly" title=" " alt="" coords="269,35,168,76,166,71,267,30"/>
+<area shape="rect" title=" " alt="" coords="178,80,242,107"/>
+<area shape="poly" title=" " alt="" coords="285,35,239,72,235,68,281,30"/>
+<area shape="rect" title=" " alt="" coords="266,80,330,107"/>
+<area shape="poly" title=" " alt="" coords="301,33,301,64,296,64,296,33"/>
+<area shape="rect" title=" " alt="" coords="354,80,418,107"/>
+<area shape="poly" title=" " alt="" coords="315,30,361,68,358,72,312,35"/>
+<area shape="rect" href="bio__commands_8h.html" title="Declaraciones del módulo encargado de la interfaz de comandos (CLI) para el Analizador de ADN basado ..." alt="" coords="442,80,562,107"/>
+<area shape="poly" title=" " alt="" coords="335,30,453,72,451,77,333,35"/>
+<area shape="rect" href="bio__func_8h.html" title="Funciones principales del módulo de administración del Trie 4&#45;ario utilizado para almacenar genes en ..." alt="" coords="587,80,668,107"/>
+<area shape="poly" title=" " alt="" coords="357,30,572,77,571,82,356,35"/>
+<area shape="rect" href="bio__struct_8h.html" title="Definición de las estructuras principales utilizadas por el Analizador de ADN basado en un Trie 4&#45;ari..." alt="" coords="520,155,610,181"/>
+<area shape="poly" title=" " alt="" coords="515,105,546,141,542,145,511,109"/>
+<area shape="poly" title=" " alt="" coords="619,109,588,145,584,141,615,105"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a975f4559470086f99cf2a086c5aacc83" id="r_a975f4559470086f99cf2a086c5aacc83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a975f4559470086f99cf2a086c5aacc83">bio_all</a> (<a class="el" href="struct_trie.html">Trie</a> *trie)</td></tr>
+<tr class="memdesc:a975f4559470086f99cf2a086c5aacc83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recorre el <a class="el" href="struct_trie.html" title="Representa el árbol 4-ario completo para la indexación de genes.">Trie</a> e imprime todos los genes presentes.  <br /></td></tr>
+<tr class="memitem:a8a37410d195c51eae980c23b6156708e" id="r_a8a37410d195c51eae980c23b6156708e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a37410d195c51eae980c23b6156708e">bio_max</a> (<a class="el" href="struct_trie.html">Trie</a> *trie)</td></tr>
+<tr class="memdesc:a8a37410d195c51eae980c23b6156708e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime los genes con mayor frecuencia de aparición.  <br /></td></tr>
+<tr class="memitem:adc0afe5532ea0ef134665751a149294b" id="r_adc0afe5532ea0ef134665751a149294b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc0afe5532ea0ef134665751a149294b">bio_min</a> (<a class="el" href="struct_trie.html">Trie</a> *trie)</td></tr>
+<tr class="memdesc:adc0afe5532ea0ef134665751a149294b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime los genes con menor frecuencia (&gt;0) de aparición.  <br /></td></tr>
+<tr class="memitem:a2daf48e4dea4034901e604d19011c196" id="r_a2daf48e4dea4034901e604d19011c196"><td class="memItemLeft" align="right" valign="top"><a id="a2daf48e4dea4034901e604d19011c196" name="a2daf48e4dea4034901e604d19011c196"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>mostrar_bienvenida</b> ()</td></tr>
+<tr class="memdesc:a2daf48e4dea4034901e604d19011c196"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra un mensaje inicial con información del programa. <br /></td></tr>
+<tr class="memitem:a29ae3dda30ae87bfc26262d3410eb454" id="r_a29ae3dda30ae87bfc26262d3410eb454"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29ae3dda30ae87bfc26262d3410eb454">leer_comando</a> (<a class="el" href="struct_comando.html">Comando</a> *c)</td></tr>
+<tr class="memdesc:a29ae3dda30ae87bfc26262d3410eb454"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lee una línea ingresada por el usuario y separa los argumentos.  <br /></td></tr>
+<tr class="memitem:a47d288bac7bea02f1c7a50acf63bc91a" id="r_a47d288bac7bea02f1c7a50acf63bc91a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47d288bac7bea02f1c7a50acf63bc91a">ejecutar_comando</a> (<a class="el" href="struct_comando.html">Comando</a> *c, <a class="el" href="struct_trie.html">Trie</a> **trie)</td></tr>
+<tr class="memdesc:a47d288bac7bea02f1c7a50acf63bc91a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ejecuta la acción solicitada por el usuario.  <br /></td></tr>
+<tr class="memitem:ab69591f35db04947754428d118f18a6c" id="r_ab69591f35db04947754428d118f18a6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab69591f35db04947754428d118f18a6c">ejecutar_cli</a> ()</td></tr>
+<tr class="memdesc:ab69591f35db04947754428d118f18a6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia el bucle principal del intérprete de comandos.  <br /></td></tr>
+<tr class="memitem:a1edb9b3e96c9b29bf37100707762205c" id="r_a1edb9b3e96c9b29bf37100707762205c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1edb9b3e96c9b29bf37100707762205c">bio_start</a> (const char *profundidad_str, <a class="el" href="struct_trie.html">Trie</a> **trie)</td></tr>
+<tr class="memdesc:a1edb9b3e96c9b29bf37100707762205c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa la estructura <a class="el" href="struct_trie.html" title="Representa el árbol 4-ario completo para la indexación de genes.">Trie</a> con una profundidad dada.  <br /></td></tr>
+<tr class="memitem:a95b7f64cce4515063cf85b692961ba0b" id="r_a95b7f64cce4515063cf85b692961ba0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95b7f64cce4515063cf85b692961ba0b">bio_read</a> (const char *filename, <a class="el" href="struct_trie.html">Trie</a> *trie)</td></tr>
+<tr class="memdesc:a95b7f64cce4515063cf85b692961ba0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lee un archivo de texto con la secuencia genética S e inserta todos los genes posibles.  <br /></td></tr>
+<tr class="memitem:a587ede2e6f6e1256a0f59dc93cb6dc0e" id="r_a587ede2e6f6e1256a0f59dc93cb6dc0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a587ede2e6f6e1256a0f59dc93cb6dc0e">bio_search</a> (<a class="el" href="struct_trie.html">Trie</a> *trie, const char *secuencia)</td></tr>
+<tr class="memdesc:a587ede2e6f6e1256a0f59dc93cb6dc0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Busca un gen específico dentro del <a class="el" href="struct_trie.html" title="Representa el árbol 4-ario completo para la indexación de genes.">Trie</a> y muestra todas sus posiciones.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Implementación del módulo encargado de la interfaz de comandos (CLI) para el analizador de ADN basado en <a class="el" href="struct_trie.html" title="Representa el árbol 4-ario completo para la indexación de genes.">Trie</a>. </p>
+<p>Este archivo contiene:</p><ul>
+<li>El bucle interactivo de lectura de comandos.</li>
+<li>La lógica de interpretación de argumentos.</li>
+<li>La vinculación de cada comando con las funciones lógicas del <a class="el" href="struct_trie.html" title="Representa el árbol 4-ario completo para la indexación de genes.">Trie</a>.</li>
+<li>Funciones de búsqueda, listados e inspecciones (all, max, min).</li>
+</ul>
+<p>Todos los comandos siguen el formato: bio &lt;accion&gt; &lt;argumento&gt;</p>
+<p>Ejemplo: bio start 3 bio read adn.txt bio search ACT bio max </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a975f4559470086f99cf2a086c5aacc83" name="a975f4559470086f99cf2a086c5aacc83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a975f4559470086f99cf2a086c5aacc83">&#9670;&#160;</a></span>bio_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bio_all </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_trie.html">Trie</a> *</td>          <td class="paramname"><span class="paramname"><em>trie</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Recorre el <a class="el" href="struct_trie.html" title="Representa el árbol 4-ario completo para la indexación de genes.">Trie</a> e imprime todos los genes presentes. </p>
+<p>Lista todos los genes presentes en el <a class="el" href="struct_trie.html" title="Representa el árbol 4-ario completo para la indexación de genes.">Trie</a> junto con sus posiciones. </p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="bio__commands_8c_a975f4559470086f99cf2a086c5aacc83_icgraph.png" border="0" usemap="#abio__commands_8c_a975f4559470086f99cf2a086c5aacc83_icgraph" loading="lazy" alt=""/></div>
+<map name="abio__commands_8c_a975f4559470086f99cf2a086c5aacc83_icgraph" id="abio__commands_8c_a975f4559470086f99cf2a086c5aacc83_icgraph">
+<area shape="rect" title="Recorre el Trie e imprime todos los genes presentes." alt="" coords="413,5,472,32"/>
+<area shape="rect" href="bio__commands_8c.html#a47d288bac7bea02f1c7a50acf63bc91a" title="Ejecuta la acción solicitada por el usuario." alt="" coords="238,5,365,32"/>
+<area shape="poly" title=" " alt="" coords="398,21,365,21,365,16,398,16"/>
+<area shape="rect" href="bio__commands_8c.html#ab69591f35db04947754428d118f18a6c" title="Inicia el bucle principal del intérprete de comandos." alt="" coords="103,5,190,32"/>
+<area shape="poly" title=" " alt="" coords="222,21,190,21,190,16,222,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Función principal del programa." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8a37410d195c51eae980c23b6156708e" name="a8a37410d195c51eae980c23b6156708e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a37410d195c51eae980c23b6156708e">&#9670;&#160;</a></span>bio_max()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bio_max </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_trie.html">Trie</a> *</td>          <td class="paramname"><span class="paramname"><em>trie</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime los genes con mayor frecuencia de aparición. </p>
+<p>Muestra los genes con la mayor frecuencia en el <a class="el" href="struct_trie.html" title="Representa el árbol 4-ario completo para la indexación de genes.">Trie</a>. </p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="bio__commands_8c_a8a37410d195c51eae980c23b6156708e_icgraph.png" border="0" usemap="#abio__commands_8c_a8a37410d195c51eae980c23b6156708e_icgraph" loading="lazy" alt=""/></div>
+<map name="abio__commands_8c_a8a37410d195c51eae980c23b6156708e_icgraph" id="abio__commands_8c_a8a37410d195c51eae980c23b6156708e_icgraph">
+<area shape="rect" title="Imprime los genes con mayor frecuencia de aparición." alt="" coords="413,5,484,32"/>
+<area shape="rect" href="bio__commands_8c.html#a47d288bac7bea02f1c7a50acf63bc91a" title="Ejecuta la acción solicitada por el usuario." alt="" coords="238,5,365,32"/>
+<area shape="poly" title=" " alt="" coords="398,21,366,21,366,16,398,16"/>
+<area shape="rect" href="bio__commands_8c.html#ab69591f35db04947754428d118f18a6c" title="Inicia el bucle principal del intérprete de comandos." alt="" coords="103,5,190,32"/>
+<area shape="poly" title=" " alt="" coords="222,21,190,21,190,16,222,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Función principal del programa." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adc0afe5532ea0ef134665751a149294b" name="adc0afe5532ea0ef134665751a149294b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc0afe5532ea0ef134665751a149294b">&#9670;&#160;</a></span>bio_min()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bio_min </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_trie.html">Trie</a> *</td>          <td class="paramname"><span class="paramname"><em>trie</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime los genes con menor frecuencia (&gt;0) de aparición. </p>
+<p>Muestra los genes con la menor frecuencia en el <a class="el" href="struct_trie.html" title="Representa el árbol 4-ario completo para la indexación de genes.">Trie</a>. </p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="bio__commands_8c_adc0afe5532ea0ef134665751a149294b_icgraph.png" border="0" usemap="#abio__commands_8c_adc0afe5532ea0ef134665751a149294b_icgraph" loading="lazy" alt=""/></div>
+<map name="abio__commands_8c_adc0afe5532ea0ef134665751a149294b_icgraph" id="abio__commands_8c_adc0afe5532ea0ef134665751a149294b_icgraph">
+<area shape="rect" title="Imprime los genes con menor frecuencia (&gt;0) de aparición." alt="" coords="413,5,480,32"/>
+<area shape="rect" href="bio__commands_8c.html#a47d288bac7bea02f1c7a50acf63bc91a" title="Ejecuta la acción solicitada por el usuario." alt="" coords="238,5,365,32"/>
+<area shape="poly" title=" " alt="" coords="398,21,366,21,366,16,398,16"/>
+<area shape="rect" href="bio__commands_8c.html#ab69591f35db04947754428d118f18a6c" title="Inicia el bucle principal del intérprete de comandos." alt="" coords="103,5,190,32"/>
+<area shape="poly" title=" " alt="" coords="222,21,190,21,190,16,222,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Función principal del programa." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a95b7f64cce4515063cf85b692961ba0b" name="a95b7f64cce4515063cf85b692961ba0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95b7f64cce4515063cf85b692961ba0b">&#9670;&#160;</a></span>bio_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bio_read </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_trie.html">Trie</a> *</td>          <td class="paramname"><span class="paramname"><em>trie</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lee un archivo de texto con la secuencia genética S e inserta todos los genes posibles. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Nombre del archivo a leer. </td></tr>
+    <tr><td class="paramname">trie</td><td><a class="el" href="struct_trie.html" title="Representa el árbol 4-ario completo para la indexación de genes.">Trie</a> ya inicializado mediante <span class="tt">bio start</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="bio__commands_8c_a95b7f64cce4515063cf85b692961ba0b_cgraph.png" border="0" usemap="#abio__commands_8c_a95b7f64cce4515063cf85b692961ba0b_cgraph" loading="lazy" alt=""/></div>
+<map name="abio__commands_8c_a95b7f64cce4515063cf85b692961ba0b_cgraph" id="abio__commands_8c_a95b7f64cce4515063cf85b692961ba0b_cgraph">
+<area shape="rect" title="Lee un archivo de texto con la secuencia genética S e inserta todos los genes posibles." alt="" coords="5,5,76,32"/>
+<area shape="rect" href="bio__func_8c.html#ae14757ffd593dcc43da912427ceab7f3" title="Inserta una aparición del gen dentro de la hoja correspondiente del Trie." alt="" coords="124,5,234,32"/>
+<area shape="poly" title=" " alt="" coords="76,16,108,16,108,21,76,21"/>
+<area shape="rect" href="bio__func_8c.html#a1052c321979b6267fc0d5d0c252c5b6d" title="Convierte un carácter representando una base nitrogenada en su índice correspondiente dentro de los h..." alt="" coords="282,5,383,32"/>
+<area shape="poly" title=" " alt="" coords="234,16,266,16,266,21,234,21"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="bio__commands_8c_a95b7f64cce4515063cf85b692961ba0b_icgraph.png" border="0" usemap="#abio__commands_8c_a95b7f64cce4515063cf85b692961ba0b_icgraph" loading="lazy" alt=""/></div>
+<map name="abio__commands_8c_a95b7f64cce4515063cf85b692961ba0b_icgraph" id="abio__commands_8c_a95b7f64cce4515063cf85b692961ba0b_icgraph">
+<area shape="rect" title="Lee un archivo de texto con la secuencia genética S e inserta todos los genes posibles." alt="" coords="413,5,484,32"/>
+<area shape="rect" href="bio__commands_8c.html#a47d288bac7bea02f1c7a50acf63bc91a" title="Ejecuta la acción solicitada por el usuario." alt="" coords="238,5,365,32"/>
+<area shape="poly" title=" " alt="" coords="398,21,366,21,366,16,398,16"/>
+<area shape="rect" href="bio__commands_8c.html#ab69591f35db04947754428d118f18a6c" title="Inicia el bucle principal del intérprete de comandos." alt="" coords="103,5,190,32"/>
+<area shape="poly" title=" " alt="" coords="222,21,190,21,190,16,222,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Función principal del programa." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a587ede2e6f6e1256a0f59dc93cb6dc0e" name="a587ede2e6f6e1256a0f59dc93cb6dc0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a587ede2e6f6e1256a0f59dc93cb6dc0e">&#9670;&#160;</a></span>bio_search()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bio_search </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_trie.html">Trie</a> *</td>          <td class="paramname"><span class="paramname"><em>trie</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>gen</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Busca un gen específico dentro del <a class="el" href="struct_trie.html" title="Representa el árbol 4-ario completo para la indexación de genes.">Trie</a> y muestra todas sus posiciones. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">trie</td><td><a class="el" href="struct_trie.html" title="Representa el árbol 4-ario completo para la indexación de genes.">Trie</a> previamente cargado. </td></tr>
+    <tr><td class="paramname">gen</td><td>Cadena de longitud m a buscar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="bio__commands_8c_a587ede2e6f6e1256a0f59dc93cb6dc0e_icgraph.png" border="0" usemap="#abio__commands_8c_a587ede2e6f6e1256a0f59dc93cb6dc0e_icgraph" loading="lazy" alt=""/></div>
+<map name="abio__commands_8c_a587ede2e6f6e1256a0f59dc93cb6dc0e_icgraph" id="abio__commands_8c_a587ede2e6f6e1256a0f59dc93cb6dc0e_icgraph">
+<area shape="rect" title="Busca un gen específico dentro del Trie y muestra todas sus posiciones." alt="" coords="413,5,498,32"/>
+<area shape="rect" href="bio__commands_8c.html#a47d288bac7bea02f1c7a50acf63bc91a" title="Ejecuta la acción solicitada por el usuario." alt="" coords="238,5,365,32"/>
+<area shape="poly" title=" " alt="" coords="398,21,366,21,366,16,398,16"/>
+<area shape="rect" href="bio__commands_8c.html#ab69591f35db04947754428d118f18a6c" title="Inicia el bucle principal del intérprete de comandos." alt="" coords="103,5,190,32"/>
+<area shape="poly" title=" " alt="" coords="222,21,190,21,190,16,222,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Función principal del programa." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1edb9b3e96c9b29bf37100707762205c" name="a1edb9b3e96c9b29bf37100707762205c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1edb9b3e96c9b29bf37100707762205c">&#9670;&#160;</a></span>bio_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bio_start </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>profundidad_str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_trie.html">Trie</a> **</td>          <td class="paramname"><span class="paramname"><em>trie</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa la estructura <a class="el" href="struct_trie.html" title="Representa el árbol 4-ario completo para la indexación de genes.">Trie</a> con una profundidad dada. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">profundidad_str</td><td>Cadena que representa el valor entero de m. </td></tr>
+    <tr><td class="paramname">trie</td><td>Doble puntero al <a class="el" href="struct_trie.html" title="Representa el árbol 4-ario completo para la indexación de genes.">Trie</a>. Puede crear uno nuevo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="bio__commands_8c_a1edb9b3e96c9b29bf37100707762205c_cgraph.png" border="0" usemap="#abio__commands_8c_a1edb9b3e96c9b29bf37100707762205c_cgraph" loading="lazy" alt=""/></div>
+<map name="abio__commands_8c_a1edb9b3e96c9b29bf37100707762205c_cgraph" id="abio__commands_8c_a1edb9b3e96c9b29bf37100707762205c_cgraph">
+<area shape="rect" title="Inicializa la estructura Trie con una profundidad dada." alt="" coords="5,29,77,56"/>
+<area shape="rect" href="bio__func_8c.html#a749079479680a7fbd0d740b1a74c4c4b" title="Inicializa completamente un Trie construyendo su árbol interno." alt="" coords="125,29,225,56"/>
+<area shape="poly" title=" " alt="" coords="77,40,109,40,109,45,77,45"/>
+<area shape="rect" href="bio__func_8c.html#a4ec28b8e7e60c7c08dd45b5f13c446e0" title="Crea de forma recursiva los nodos del Trie 4&#45;ario hasta alcanzar la profundidad especificada." alt="" coords="273,29,418,56"/>
+<area shape="poly" title=" " alt="" coords="225,40,257,40,257,45,225,45"/>
+<area shape="poly" title=" " alt="" coords="316,30,311,21,315,11,327,5,346,3,366,5,377,12,374,16,365,10,346,8,328,10,319,15,316,20,321,28"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="bio__commands_8c_a1edb9b3e96c9b29bf37100707762205c_icgraph.png" border="0" usemap="#abio__commands_8c_a1edb9b3e96c9b29bf37100707762205c_icgraph" loading="lazy" alt=""/></div>
+<map name="abio__commands_8c_a1edb9b3e96c9b29bf37100707762205c_icgraph" id="abio__commands_8c_a1edb9b3e96c9b29bf37100707762205c_icgraph">
+<area shape="rect" title="Inicializa la estructura Trie con una profundidad dada." alt="" coords="413,5,485,32"/>
+<area shape="rect" href="bio__commands_8c.html#a47d288bac7bea02f1c7a50acf63bc91a" title="Ejecuta la acción solicitada por el usuario." alt="" coords="238,5,365,32"/>
+<area shape="poly" title=" " alt="" coords="398,21,366,21,366,16,398,16"/>
+<area shape="rect" href="bio__commands_8c.html#ab69591f35db04947754428d118f18a6c" title="Inicia el bucle principal del intérprete de comandos." alt="" coords="103,5,190,32"/>
+<area shape="poly" title=" " alt="" coords="222,21,190,21,190,16,222,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Función principal del programa." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab69591f35db04947754428d118f18a6c" name="ab69591f35db04947754428d118f18a6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab69591f35db04947754428d118f18a6c">&#9670;&#160;</a></span>ejecutar_cli()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ejecutar_cli </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicia el bucle principal del intérprete de comandos. </p>
+<p>Esta función mantiene activo el programa leyendo comandos del usuario hasta que se invoque explícitamente la acción <span class="tt">bio exit</span>. </p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="bio__commands_8c_ab69591f35db04947754428d118f18a6c_cgraph.png" border="0" usemap="#abio__commands_8c_ab69591f35db04947754428d118f18a6c_cgraph" loading="lazy" alt=""/></div>
+<map name="abio__commands_8c_ab69591f35db04947754428d118f18a6c_cgraph" id="abio__commands_8c_ab69591f35db04947754428d118f18a6c_cgraph">
+<area shape="rect" title="Inicia el bucle principal del intérprete de comandos." alt="" coords="5,271,93,297"/>
+<area shape="rect" href="bio__commands_8c.html#a47d288bac7bea02f1c7a50acf63bc91a" title="Ejecuta la acción solicitada por el usuario." alt="" coords="144,157,272,184"/>
+<area shape="poly" title=" " alt="" coords="68,268,174,191,177,195,71,272"/>
+<area shape="rect" href="bio__commands_8c.html#a29ae3dda30ae87bfc26262d3410eb454" title="Lee una línea ingresada por el usuario y separa los argumentos." alt="" coords="157,245,259,272"/>
+<area shape="poly" title=" " alt="" coords="93,274,141,267,142,272,93,280"/>
+<area shape="rect" href="bio__func_8c.html#aafb75a89e0316eb572a3fc1e44e0f7d3" title="Libera completamente un Trie, incluyendo su raíz y todos los nodos." alt="" coords="167,296,248,323"/>
+<area shape="poly" title=" " alt="" coords="93,288,152,298,151,303,93,294"/>
+<area shape="rect" href="bio__commands_8c.html#a2daf48e4dea4034901e604d19011c196" title="Muestra un mensaje inicial con información del programa." alt="" coords="141,347,275,373"/>
+<area shape="poly" title=" " alt="" coords="74,295,142,332,155,338,152,343,139,337,72,300"/>
+<area shape="rect" href="bio__commands_8c.html#a975f4559470086f99cf2a086c5aacc83" title="Recorre el Trie e imprime todos los genes presentes." alt="" coords="340,5,398,32"/>
+<area shape="poly" title=" " alt="" coords="217,155,260,103,289,71,321,42,325,39,329,43,325,46,293,75,264,106,221,158"/>
+<area shape="rect" href="bio__commands_8c.html#a8a37410d195c51eae980c23b6156708e" title="Imprime los genes con mayor frecuencia de aparición." alt="" coords="334,56,404,83"/>
+<area shape="poly" title=" " alt="" coords="228,155,322,92,328,88,331,93,324,97,231,159"/>
+<area shape="rect" href="bio__commands_8c.html#adc0afe5532ea0ef134665751a149294b" title="Imprime los genes con menor frecuencia (&gt;0) de aparición." alt="" coords="336,107,402,133"/>
+<area shape="poly" title=" " alt="" coords="252,154,320,132,322,137,254,159"/>
+<area shape="rect" href="bio__commands_8c.html#a95b7f64cce4515063cf85b692961ba0b" title="Lee un archivo de texto con la secuencia genética S e inserta todos los genes posibles." alt="" coords="334,157,404,184"/>
+<area shape="poly" title=" " alt="" coords="272,168,318,168,318,173,272,173"/>
+<area shape="rect" href="bio__commands_8c.html#a587ede2e6f6e1256a0f59dc93cb6dc0e" title="Busca un gen específico dentro del Trie y muestra todas sus posiciones." alt="" coords="326,208,411,235"/>
+<area shape="poly" title=" " alt="" coords="254,182,313,201,311,206,252,187"/>
+<area shape="rect" href="bio__commands_8c.html#a1edb9b3e96c9b29bf37100707762205c" title="Inicializa la estructura Trie con una profundidad dada." alt="" coords="333,259,404,285"/>
+<area shape="poly" title=" " alt="" coords="231,182,324,244,331,248,328,253,322,249,228,187"/>
+<area shape="rect" href="bio__func_8c.html#ae14757ffd593dcc43da912427ceab7f3" title="Inserta una aparición del gen dentro de la hoja correspondiente del Trie." alt="" coords="462,157,573,184"/>
+<area shape="poly" title=" " alt="" coords="404,168,447,168,447,173,404,173"/>
+<area shape="rect" href="bio__func_8c.html#a1052c321979b6267fc0d5d0c252c5b6d" title="Convierte un carácter representando una base nitrogenada en su índice correspondiente dentro de los h..." alt="" coords="643,157,744,184"/>
+<area shape="poly" title=" " alt="" coords="573,168,627,168,627,173,573,173"/>
+<area shape="rect" href="bio__func_8c.html#a749079479680a7fbd0d740b1a74c4c4b" title="Inicializa completamente un Trie construyendo su árbol interno." alt="" coords="467,259,568,285"/>
+<area shape="poly" title=" " alt="" coords="405,269,452,269,452,275,405,275"/>
+<area shape="rect" href="bio__func_8c.html#a4ec28b8e7e60c7c08dd45b5f13c446e0" title="Crea de forma recursiva los nodos del Trie 4&#45;ario hasta alcanzar la profundidad especificada." alt="" coords="621,259,766,285"/>
+<area shape="poly" title=" " alt="" coords="568,269,605,269,605,275,568,275"/>
+<area shape="poly" title=" " alt="" coords="663,260,658,250,661,240,674,234,693,232,714,235,726,241,723,246,713,240,693,237,675,239,665,244,663,249,668,257"/>
+<area shape="rect" href="bio__func_8c.html#a462b18b472503518bb655165df5cabfe" title="Libera recursivamente un nodo y todos sus hijos." alt="" coords="323,333,414,360"/>
+<area shape="poly" title=" " alt="" coords="250,316,308,330,307,335,248,321"/>
+<area shape="poly" title=" " alt="" coords="343,334,338,325,341,315,352,309,369,307,387,309,396,316,393,320,385,314,369,312,353,314,345,318,343,324,347,332"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="bio__commands_8c_ab69591f35db04947754428d118f18a6c_icgraph.png" border="0" usemap="#abio__commands_8c_ab69591f35db04947754428d118f18a6c_icgraph" loading="lazy" alt=""/></div>
+<map name="abio__commands_8c_ab69591f35db04947754428d118f18a6c_icgraph" id="abio__commands_8c_ab69591f35db04947754428d118f18a6c_icgraph">
+<area shape="rect" title="Inicia el bucle principal del intérprete de comandos." alt="" coords="103,5,190,32"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Función principal del programa." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a47d288bac7bea02f1c7a50acf63bc91a" name="a47d288bac7bea02f1c7a50acf63bc91a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47d288bac7bea02f1c7a50acf63bc91a">&#9670;&#160;</a></span>ejecutar_comando()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ejecutar_comando </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_comando.html">Comando</a> *</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_trie.html">Trie</a> **</td>          <td class="paramname"><span class="paramname"><em>trie</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ejecuta la acción solicitada por el usuario. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td><a class="el" href="struct_comando.html" title="Estructura que representa un comando ingresado por el usuario.">Comando</a> ya separado en cmd, arg1 y arg2. </td></tr>
+    <tr><td class="paramname">trie</td><td>Doble puntero al <a class="el" href="struct_trie.html" title="Representa el árbol 4-ario completo para la indexación de genes.">Trie</a>, ya que puede inicializarse dentro del comando <span class="tt">start</span>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>0 para finalizar el programa, 1 para continuar ejecutando la CLI. </dd></dl>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="bio__commands_8c_a47d288bac7bea02f1c7a50acf63bc91a_cgraph.png" border="0" usemap="#abio__commands_8c_a47d288bac7bea02f1c7a50acf63bc91a_cgraph" loading="lazy" alt=""/></div>
+<map name="abio__commands_8c_a47d288bac7bea02f1c7a50acf63bc91a_cgraph" id="abio__commands_8c_a47d288bac7bea02f1c7a50acf63bc91a_cgraph">
+<area shape="rect" title="Ejecuta la acción solicitada por el usuario." alt="" coords="5,132,133,159"/>
+<area shape="rect" href="bio__commands_8c.html#a975f4559470086f99cf2a086c5aacc83" title="Recorre el Trie e imprime todos los genes presentes." alt="" coords="194,5,252,32"/>
+<area shape="poly" title=" " alt="" coords="82,130,124,89,179,42,184,38,187,43,182,46,127,93,85,134"/>
+<area shape="rect" href="bio__commands_8c.html#a8a37410d195c51eae980c23b6156708e" title="Imprime los genes con mayor frecuencia de aparición." alt="" coords="188,56,258,83"/>
+<area shape="poly" title=" " alt="" coords="97,129,179,88,181,92,99,134"/>
+<area shape="rect" href="bio__commands_8c.html#adc0afe5532ea0ef134665751a149294b" title="Imprime los genes con menor frecuencia (&gt;0) de aparición." alt="" coords="190,107,256,133"/>
+<area shape="poly" title=" " alt="" coords="133,132,174,125,175,131,134,137"/>
+<area shape="rect" href="bio__commands_8c.html#a95b7f64cce4515063cf85b692961ba0b" title="Lee un archivo de texto con la secuencia genética S e inserta todos los genes posibles." alt="" coords="188,157,258,184"/>
+<area shape="poly" title=" " alt="" coords="134,153,173,160,172,165,133,158"/>
+<area shape="rect" href="bio__commands_8c.html#a587ede2e6f6e1256a0f59dc93cb6dc0e" title="Busca un gen específico dentro del Trie y muestra todas sus posiciones." alt="" coords="181,208,265,235"/>
+<area shape="poly" title=" " alt="" coords="99,157,181,198,179,203,97,162"/>
+<area shape="rect" href="bio__commands_8c.html#a1edb9b3e96c9b29bf37100707762205c" title="Inicializa la estructura Trie con una profundidad dada." alt="" coords="187,259,258,285"/>
+<area shape="poly" title=" " alt="" coords="85,157,127,198,182,245,187,248,184,252,179,249,124,202,82,161"/>
+<area shape="rect" href="bio__func_8c.html#ae14757ffd593dcc43da912427ceab7f3" title="Inserta una aparición del gen dentro de la hoja correspondiente del Trie." alt="" coords="313,157,423,184"/>
+<area shape="poly" title=" " alt="" coords="258,168,298,168,298,173,258,173"/>
+<area shape="rect" href="bio__func_8c.html#a1052c321979b6267fc0d5d0c252c5b6d" title="Convierte un carácter representando una base nitrogenada en su índice correspondiente dentro de los h..." alt="" coords="493,157,595,184"/>
+<area shape="poly" title=" " alt="" coords="424,168,478,168,478,173,424,173"/>
+<area shape="rect" href="bio__func_8c.html#a749079479680a7fbd0d740b1a74c4c4b" title="Inicializa completamente un Trie construyendo su árbol interno." alt="" coords="318,259,418,285"/>
+<area shape="poly" title=" " alt="" coords="259,269,302,269,302,275,259,275"/>
+<area shape="rect" href="bio__func_8c.html#a4ec28b8e7e60c7c08dd45b5f13c446e0" title="Crea de forma recursiva los nodos del Trie 4&#45;ario hasta alcanzar la profundidad especificada." alt="" coords="471,259,617,285"/>
+<area shape="poly" title=" " alt="" coords="419,269,455,269,455,275,419,275"/>
+<area shape="poly" title=" " alt="" coords="514,260,508,250,512,240,524,234,544,232,565,235,576,241,574,246,563,240,544,237,526,239,516,244,514,249,518,257"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="bio__commands_8c_a47d288bac7bea02f1c7a50acf63bc91a_icgraph.png" border="0" usemap="#abio__commands_8c_a47d288bac7bea02f1c7a50acf63bc91a_icgraph" loading="lazy" alt=""/></div>
+<map name="abio__commands_8c_a47d288bac7bea02f1c7a50acf63bc91a_icgraph" id="abio__commands_8c_a47d288bac7bea02f1c7a50acf63bc91a_icgraph">
+<area shape="rect" title="Ejecuta la acción solicitada por el usuario." alt="" coords="238,5,365,32"/>
+<area shape="rect" href="bio__commands_8c.html#ab69591f35db04947754428d118f18a6c" title="Inicia el bucle principal del intérprete de comandos." alt="" coords="103,5,190,32"/>
+<area shape="poly" title=" " alt="" coords="222,21,190,21,190,16,222,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Función principal del programa." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a29ae3dda30ae87bfc26262d3410eb454" name="a29ae3dda30ae87bfc26262d3410eb454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29ae3dda30ae87bfc26262d3410eb454">&#9670;&#160;</a></span>leer_comando()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void leer_comando </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_comando.html">Comando</a> *</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lee una línea ingresada por el usuario y separa los argumentos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>Puntero a una estructura <a class="el" href="struct_comando.html" title="Estructura que representa un comando ingresado por el usuario.">Comando</a> donde se almacenará la información.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>La función extrae:</p><ul>
+<li>el comando base,</li>
+<li>la acción,</li>
+<li>un argumento adicional (si existe). </li>
+</ul>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="bio__commands_8c_a29ae3dda30ae87bfc26262d3410eb454_icgraph.png" border="0" usemap="#abio__commands_8c_a29ae3dda30ae87bfc26262d3410eb454_icgraph" loading="lazy" alt=""/></div>
+<map name="abio__commands_8c_a29ae3dda30ae87bfc26262d3410eb454_icgraph" id="abio__commands_8c_a29ae3dda30ae87bfc26262d3410eb454_icgraph">
+<area shape="rect" title="Lee una línea ingresada por el usuario y separa los argumentos." alt="" coords="238,5,340,32"/>
+<area shape="rect" href="bio__commands_8c.html#ab69591f35db04947754428d118f18a6c" title="Inicia el bucle principal del intérprete de comandos." alt="" coords="103,5,190,32"/>
+<area shape="poly" title=" " alt="" coords="223,21,191,21,191,16,223,16"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Función principal del programa." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="bio__commands_8c.html">bio_commands.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>
