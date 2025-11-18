@@ -1,27 +1,32 @@
 > Universidad de Magallanes — Ingeniería Civil en Computación e Informática  
-> Estructura de Datos — Grupo 3 — Tarea 3: Analizador de de secuencias de ADN
->comandos: make - make run - bio start 2 - bio read adn.txt - bio search AA - bio max/min/all - bio exit 
+> Estructura de Datos — Grupo 3
+> Tarea 3: Analizador de de secuencias de ADN
 
-# Analizador ADN
+# 🧬 Analizador ADN
 
-**Analizar ADN** es un sistema de análisis de secuencias de ADN usando árboles 4-arios (Tries). Este trabajo se desarrolló en C para la asignatura de **Estructura de Datos** siendo la **Tarea 3**.
+**Analizador ADN** es un sistema de análisis de secuencias genéticas utilizando **árboles 4-arios (Tries)**.  
+Este proyecto fue desarrollado en lenguaje **C**, siguiendo las especificaciones de la **Tarea 3 de Estructura de Datos**.
 
-## Integrantes
-- [Diego Herrera](https://github.com/diherrerab) - correo@umag.cl
+---
+
+## 👥 Integrantes
+- [Diego Herrera](https://github.com/diherrerab) - diherrer@umag.cl
 - [Catalina Viñas](https://github.com/2wedcfvb) - caastuci@umag.cl
 - [Oscar Cifuentes](https://github.com/iBluZiiZ) - ocifuent@umag.cl 
 - [Gabriel Hernández](https://github.com/GabrielHH-umag) - gabrhern@umag.cl
-- [Sebastián Vera](https://github.com/SeVAguilar) - correo@umag.cl
+- [Sebastián Vera](https://github.com/SeVAguilar) - sveragui@umag.cl
 
-## Objetivos
+
+## 🎯 Objetivos
 - Implementar y manipular estructuras de datos abstractas como árboles y listas enlazadas para almacenar y gestionar los datos manipulados.
 - Desarrollar habilidades en programación en lenguaje C, centrándose en el manejo de memoria, punteros y eficiencia algorítmica.
 - Implementar un sistema de búsqueda de patrones utilizando árboles tries.
 
-## Compilación
-El proyecto utiliza un **Makefile multiplataforma (Linux/Windows)** que automatiza todas las tareas de compilación, limpieza, prueba y empaquetado del proyecto.
+## ⚙️ Compilación del proyecto
 
-### Comandos del Makefile
+El proyecto incluye un **Makefile multiplataforma (Linux/Windows)** que automatiza compilación, limpieza, generación de documentación y empaquetado.
+
+### 🔧 Comandos disponibles del Makefile
 | Comando        | Descripción                                                                     |
 | -------------- | ------------------------------------------------------------------------------- |
 | `make`         | Compila el proyecto y genera el ejecutable principal en la carpeta `build/bin/`.|
@@ -31,24 +36,29 @@ El proyecto utiliza un **Makefile multiplataforma (Linux/Windows)** que automati
 | `make rebuild` | Limpia y recompila completamente el proyecto desde cero.                        |
 | `make folders` | Crea las carpetas necesarias para el funcionamiento del proyecto (si no existen)|
 | `make run`     | Inicia el ejecutable                                                            |
-### Compilación del programa
+
+---
+
+## Compilación del programa
 ```bash
 make
 ```
+
 El ejecutable queda en la carpeta `build/bin/` como:
 - adn.exe  (Windows)
 - adn      (Linux)
-### Ejecutar el Programa
+
+Para ejecutar:
 ```bash
 make run
 ```
 
-### Limpiar archivos binarios:
+Para limpiar archivos binarios:
 ```bash
 make clean
 ```
 
-## Uso del programa
+## 🖥️ Uso del programa
 El programa se ejecuta desde la consola e interpreta comandos **prefijados** con `adn`.
 
 ### Funciones disponibles
@@ -61,9 +71,6 @@ El programa se ejecuta desde la consola e interpreta comandos **prefijados** con
 | `bio min`             | Muestra los genes menos repetidos.                                           |
 | `bio all`             | Muestra todos los genes y posiciones.                                        |
 | `bio exit`            | Libera la memoria y cierra el programa.                                      |
-
-## Pruebas automáticas
-Próximamente se agregarán casos de prueba en el directorio `test/`. Si es que se hace.
 
 ## ¿Cómo dejar el programa funcional?
 1. Al clonar el repositorio en su ordenador debe dirigirse a la carpeta en donde se encuentra el proyecto.
@@ -84,12 +91,46 @@ make
 ./build/bin/adn     # Linux
 build\bin\adn.exe   # Windows
 ```
-6. Puede probar el [ejemplo de uso](#-ejemplo-de-uso), o por usted mismo.
 
+## 🚀 Ejemplo 
+Tenemos un archivo adn.txt con la secuencia:
+```nginx
+TACTAAGAAGC
+```
 
-## Ejemplo de uso
-```bash
-Al final.
+y ejecutamos
+```pgsql
+> bio start 2
+Tree created with height 2
+
+> bio read adn.txt
+Sequence S read from file
+
+> bio search AA
+4 7
+
+> bio max
+AA 4 7
+AG 5 8
+TA 0 3
+
+> bio min
+AC 1
+CT 2
+GA 6
+GC 9
+
+> bio all
+AA 4 7
+AC 1
+AG 5 8
+CT 2
+GA 6
+GC 9
+TA 0 3
+
+> bio exit
+Clearing cache and exiting...
 ```
 
 ## Estructura del proyecto
@@ -98,7 +139,6 @@ ED-Trabajo-3-ADN/
 │
 ├── src/           → Código fuente (.c)
 ├── include/       → Archivos de cabecera (.h)
-├── test/          → Pruebas automáticas
 ├── docs/          → Documentación e informe
 ├── build/
 │   ├── obj/       → Archivos objeto (.o)
