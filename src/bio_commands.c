@@ -1,3 +1,24 @@
+/**
+ * @file bio_commands.c
+ * @brief Implementación del módulo encargado de la interfaz de comandos (CLI)
+ *        para el analizador de ADN basado en Trie.
+ *
+ * Este archivo contiene:
+ * - El bucle interactivo de lectura de comandos.
+ * - La lógica de interpretación de argumentos.
+ * - La vinculación de cada comando con las funciones lógicas del Trie.
+ * - Funciones de búsqueda, listados e inspecciones (all, max, min).
+ *
+ * Todos los comandos siguen el formato:
+ *   bio <accion> <argumento>
+ *
+ * Ejemplo:
+ *   bio start 3
+ *   bio read adn.txt
+ *   bio search ACT
+ *   bio max
+ */
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -7,16 +28,55 @@
 #include "bio_commands.h"
 #include "bio_func.h"
 
-/* ----------------- Forward declarations (por si el .h aún no los tiene) ----------------- */
+/* ------------------------------------------------------------------------- */
+/* ---------------------- Declaraciones de funciones internas -------------- */
+/* ------------------------------------------------------------------------- */
+
+/**
+ * @brief Verifica si un gen contiene exclusivamente caracteres A, C, G o T,
+ *        y si su longitud coincide exactamente con m.
+ *
+ * @param s Cadena a validar.
+ * @param m Tamaño esperado del gen.
+ * @return 1 si es válido, 0 si no lo es.
+ */
 static int  validar_gen(const char* s, int m);
+
+/**
+ * @brief Navega el Trie siguiendo la secuencia s y retorna la hoja asociada.
+ *
+ * @param trie Árbol Trie ya inicializado.
+ * @param s    Cadena de longitud m.
+ * @return Nodo hoja correspondiente, o NULL si el camino no existe.
+ */
 static Nodo* navegar(Trie* trie, const char* s);
+
+/**
+ * @brief Imprime todas las posiciones registradas en un nodo hoja.
+ *
+ * @param n Nodo hoja cuyo arreglo de posiciones se desea imprimir.
+ */
 static void imprimir_posiciones(const Nodo* n);
 
+/**
+ * @brief Recorre el Trie e imprime todos los genes presentes.
+ */
 void bio_all(Trie* trie);
+
+/**
+ * @brief Imprime los genes con mayor frecuencia de aparición.
+ */
 void bio_max(Trie* trie);
+
+/**
+ * @brief Imprime los genes con menor frecuencia (>0) de aparición.
+ */
 void bio_min(Trie* trie);
 
-/* ------------------------------------ CLI ------------------------------------ */
+
+/* ------------------------------------------------------------------------- */
+/* ---------------------------- CLI INTERACTIVA ---------------------------- */
+/* ------------------------------------------------------------------------- */
 
 void mostrar_bienvenida() {
     printf("=========================================\n");
@@ -32,8 +92,13 @@ void leer_comando(Comando *c) {
         c->cmd[0] = c->arg1[0] = c->arg2[0] = '\0';
         return;
     }
+    /* Remover salto de línea */
     buffer[strcspn(buffer, "\n")] = '\0';
+
+    /* Limpiar estructura */
     c->cmd[0] = c->arg1[0] = c->arg2[0] = '\0';
+
+    /* Extraer hasta 3 componentes: cmd, subcomando, argumento */
     sscanf(buffer, "%15s %63s %63s", c->cmd, c->arg1, c->arg2);
 }
 
@@ -43,18 +108,19 @@ int ejecutar_comando(Comando *c, Trie** trie) {
         return 1;
     }
 
+    /* Despacho de subcomandos */
     if (strcmp(c->arg1, "start") == 0) {
         bio_start(c->arg2, trie);
     } else if (strcmp(c->arg1, "read") == 0) {
         bio_read(c->arg2, *trie);
     } else if (strcmp(c->arg1, "search") == 0) {
-        bio_search(*trie, c->arg2);    // imprime posiciones o -1
+        bio_search(*trie, c->arg2);
     } else if (strcmp(c->arg1, "max") == 0) {
-        bio_max(*trie);                // imprime empates con mayor frecuencia
+        bio_max(*trie);
     } else if (strcmp(c->arg1, "min") == 0) {
-        bio_min(*trie);                // imprime empates con menor frecuencia (>0)
+        bio_min(*trie);
     } else if (strcmp(c->arg1, "all") == 0) {
-        bio_all(*trie);                // imprime todos los genes presentes con posiciones
+        bio_all(*trie);
     } else if (strcmp(c->arg1, "exit") == 0) {
         printf("Clearing cache and exiting…\n"); 
         return 0;
@@ -77,7 +143,10 @@ void ejecutar_cli() {
     liberar_trie(trie);
 }
 
-/* -------------------------- START / READ (IO + carga) -------------------------- */
+
+/* ------------------------------------------------------------------------- */
+/* ------------------------- START / READ (I/O + carga) -------------------- */
+/* ------------------------------------------------------------------------- */
 
 void bio_start(const char* profundidad_str, Trie** trie) {
     if (*trie != NULL) {
@@ -109,6 +178,7 @@ void bio_read(const char* filename, Trie* trie) {
     size_t len = 0;
 
     int ch;
+    /* Leer archivo y normalizar a mayúsculas */
     while ((ch = fgetc(file)) != EOF) {
         if (ch == '\n' || ch == '\r') continue;
         if (len < MAX) secuencia[len++] = (char)toupper((unsigned char)ch);
@@ -118,8 +188,8 @@ void bio_read(const char* filename, Trie* trie) {
     if (len < (size_t)m) { printf("La secuencia es mas corta que m.\n"); free(secuencia); return; }
     secuencia[len] = '\0';
 
+    /* Ventana deslizante tamaño m */
     for (size_t i = 0; i + m <= len; i++) {
-        // crear ventana m segura
         char *gen = malloc((size_t)m + 1);
         if (!gen) break;
         memcpy(gen, &secuencia[i], (size_t)m);
@@ -131,7 +201,10 @@ void bio_read(const char* filename, Trie* trie) {
     printf("Sequence S read from file\n");
 }
 
-/* -------------------------- Helpers de busqueda/impresion -------------------------- */
+
+/* ------------------------------------------------------------------------- */
+/* ----------------------- Helpers: búsqueda / impresión -------------------- */
+/* ------------------------------------------------------------------------- */
 
 static int validar_gen(const char* s, int m) {
     if (!s) return 0;
@@ -140,7 +213,7 @@ static int validar_gen(const char* s, int m) {
         if (c == '\0') return 0;
         if (!(c == 'A' || c == 'C' || c == 'G' || c == 'T')) return 0;
     }
-    return s[m] == '\0'; // exactamente largo m
+    return s[m] == '\0';
 }
 
 static Nodo* navegar(Trie* trie, const char* s) {
@@ -161,13 +234,17 @@ static void imprimir_posiciones(const Nodo* n) {
     printf("\n");
 }
 
-/* -------------------------- SEARCH (salida: posiciones o -1) -------------------------- */
+
+/* ------------------------------------------------------------------------- */
+/* ------------------------------ SEARCH ----------------------------------- */
+/* ------------------------------------------------------------------------- */
 
 void bio_search(Trie* trie, const char* secuencia) {
     if (!trie || !trie->raiz || !secuencia) { printf("-1\n"); return; }
     int m = trie->profundidad;
     char *buf = malloc((size_t)m + 1);
     if (!buf) { printf("-1\n"); return; }
+    /* Normalizar entrada a mayúsculas */
     for (int i = 0; i < m && secuencia[i]; i++)
         buf[i] = (char)toupper((unsigned char)secuencia[i]);
 
@@ -193,7 +270,9 @@ void bio_search(Trie* trie, const char* secuencia) {
 }
 
 
-/* -------------------------- ALL -------------------------- */
+/* ------------------------------------------------------------------------- */
+/* ------------------------------- ALL ------------------------------------- */
+/* ------------------------------------------------------------------------- */
 
 static void dfs_all(Nodo* nodo, char* pref, int depth, int m) {
     if (!nodo) return;
@@ -221,7 +300,10 @@ void bio_all(Trie* trie) {
     free(pref);
 }
 
-/* -------------------------- MAX / MIN -------------------------- */
+
+/* ------------------------------------------------------------------------- */
+/* ------------------------------- MAX / MIN ------------------------------- */
+/* ------------------------------------------------------------------------- */
 
 static void dfs_freq(Nodo* nodo, int depth, int m, int* maxf, int* minf) {
     if (!nodo) return;

@@ -22,7 +22,7 @@ IS_MSYS2 := $(findstring MSYS,$(MSYSTEM))$(findstring MINGW,$(MSYSTEM))
 
 # Detectar OS
 ifeq ($(OS),Windows_NT)
-	# --- WINDOWS ---
+# --- WINDOWS ---
 	ifeq ($(IS_MSYS2),)
 		# Windows CMD nativo
 		EXEC=adn.exe
@@ -92,18 +92,18 @@ endif
 clean:
 ifeq ($(OS),Windows_NT)
 ifeq ($(IS_MSYS2),)
-	# --- Windows CMD ---
+# --- Windows CMD ---
 	-$(RM) $(OBJ_DIR)$(SEP)*.o >nul 2>&1
 	-$(RM) $(BIN_DIR)$(SEP)$(EXEC) >nul 2>&1
 	-$(RM) $(BIN_DIR)$(SEP)$(TEST_EXEC) >nul 2>&1
 else
-	# --- MSYS2 / MinGW ---
+# --- MSYS2 / MinGW ---
 	-$(RM) $(OBJ_FILES)
 	-$(RM) $(BIN_DIR)/$(EXEC)
 	-$(RM) $(BIN_DIR)/$(TEST_EXEC)
 endif
 else
-	# --- Linux / Mac ---
+# --- Linux / Mac ---
 	-$(RM) $(OBJ_FILES)
 	-$(RM) $(BIN_DIR)/$(EXEC)
 	-$(RM) $(BIN_DIR)/$(TEST_EXEC)
@@ -134,9 +134,9 @@ rebuild: clean all
 .PHONY: run
 run: all
 ifeq ($(RUNNER),CMD)
-	# Ejecutar en Windows CMD con rutas convertidas
+# Ejecutar en Windows CMD con rutas convertidas
 	@cmd /C "$(subst /,\\,$(BIN_DIR))\\$(EXEC)"
 else
-	# Ejecutar normalmente en MSYS2 / Linux / Mac
+# Ejecutar normalmente en MSYS2 / Linux / Mac
 	@$(BIN_DIR)/$(EXEC)
 endif
